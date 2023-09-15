@@ -8,8 +8,8 @@ import {
 import ReactWhatsapp from "react-whatsapp";
 
 const Footer = () => {
-  const phoneNumber = "+923433093451";
-  const emailAddress = "contact@example.com"; // Replace with your actual email address
+  const phoneNumber = "+923002259901";
+  const emailAddress = "qraza1020@gmail.com"; // Replace with your actual email address
   const location =
     "Qasim electronics, Shop no 10, bismillah market, 236 Shambhu Nath St, Artillery Maidan, Karachi, Karachi City, Sindh"; //
   const handleCallButtonClick = () => {
