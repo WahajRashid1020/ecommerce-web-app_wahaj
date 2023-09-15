@@ -13,9 +13,10 @@ const Product = ({ product: { image, name, slug, price } }) => {
             height={250}
             className="product-image"
             alt=""
+            loading="lazy" // Add this attribute
           />
           <p className="product-name">{name}</p>
-          <p className="product-price">{price}</p>
+          <p className="product-price">Rs. {price} PKR</p>
         </div>
       </Link>
     </div>

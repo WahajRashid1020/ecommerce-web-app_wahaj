@@ -60,11 +60,12 @@ const Cart = () => {
                 <img
                   src={urlFor(item?.image[0])}
                   className="cart-product-image"
+                  loading="lazy" // Add this attribute
                 />
                 <div className="item-desc">
                   <div className="flex top">
                     <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h4>Rs. {item.price} PKR</h4>
                   </div>
                   <div className="flex bottom">
                     <div>
@@ -106,7 +107,7 @@ const Cart = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal:</h3>
-              <h3>${totalPrice}</h3>
+              <h3>Rs. {totalPrice} PKR</h3>
             </div>
             <div className="btn-container">
               <ReactWhatsapp

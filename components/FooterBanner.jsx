@@ -38,6 +38,7 @@ const FooterBanner = ({
           src={urlFor(image)}
           className="footer-banner-image"
           alt="No-Image-found"
+          loading="lazy" // Add this attribute
         />
       </div>
     </div>

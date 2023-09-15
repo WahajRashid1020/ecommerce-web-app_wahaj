@@ -11,15 +11,16 @@ import { useStateContext } from "../../context/StateContext";
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
-  const { onAdd, qty, incQty, decQty } = useStateContext();
+  const { onAdd, qty, incQty, decQty, resetQty } = useStateContext();
 
   return (
-    <div>
+    <div className="top">
       <div className="product-detail-container">
         <div>
           <div className="image-container">
             <img
               className="product-detail-image"
+              loading="lazy" // Add this attribute
               src={urlFor(image && image[index])}
             />
           </div>
@@ -27,6 +28,7 @@ const ProductDetails = ({ product, products }) => {
             {image?.map((item, i) => (
               <img
                 key={i}
+                loading="lazy" // Add this attribute
                 src={urlFor(item)}
                 className={
                   i === index ? "small-image selected-image" : "small-image"
@@ -38,7 +40,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <div className="product-detail-desc">
           <h1>{name}</h1>
-          <div className="reviews">
+          {/* <div className="reviews">
             <div>
               <AiFillStar />
               <AiFillStar />
@@ -47,10 +49,10 @@ const ProductDetails = ({ product, products }) => {
               <AiOutlineStar />
             </div>
             <p>(20)</p>
-          </div>
+          </div> */}
           <h4>Details: </h4>
           <p>{details}</p>
-          <p className="price">${price}</p>
+          <p className="price">Rs. {price} PKR</p>
           <div className="quantity">
             <h3>Quantity: </h3>
             <p className="quantity-desc">
@@ -67,7 +69,10 @@ const ProductDetails = ({ product, products }) => {
             <button
               className="buy-now"
               type="button"
-              onClick={() => onAdd(product, qty)}
+              onClick={() => {
+                onAdd(product, qty);
+                resetQty();
+              }}
             >
               ADD TO CART
             </button>

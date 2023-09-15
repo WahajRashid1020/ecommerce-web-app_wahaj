@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { client } from "../lib/client";
 
-import { FooterBanner, HeroBanner, Product } from "../components";
-const Home = ({ products, bannerData }) => {
+import { Product } from "../../components";
+import { client } from "../../lib/client";
+
+const Products = ({ products }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredProducts = products.filter((product) =>
@@ -10,13 +11,7 @@ const Home = ({ products, bannerData }) => {
   );
 
   return (
-    <>
-      <HeroBanner id="banner" HeroBanner={bannerData.length && bannerData[0]} />
-      <div id="best-selling-products" className="products-heading">
-        <br />
-        <br />
-        <h2>Best Selling Products</h2>
-      </div>
+    <div className="productspage">
       <div className="search">
         <input
           className="searchbar"
@@ -26,27 +21,22 @@ const Home = ({ products, bannerData }) => {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-
       <div id="products-container" className="products-container">
         {filteredProducts.map((product) => (
           <Product key={product._id} product={product} />
         ))}
-        <FooterBanner id="footer" FooterBanner={bannerData && bannerData[0]} />
       </div>
-    </>
+      <div />
+    </div>
   );
 };
-
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
 
-  const bannerQuery = '*[_type == "banner"]';
-  const bannerData = await client.fetch(bannerQuery);
-
   return {
-    props: { products, bannerData },
+    props: { products },
   };
 };
 
-export default Home;
+export default Products;

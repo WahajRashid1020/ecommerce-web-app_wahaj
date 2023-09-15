@@ -10,9 +10,16 @@ const HeroBanner = ({ HeroBanner }) => {
         <h3>{HeroBanner.midText}</h3>
         <h1>{HeroBanner.largeText1}</h1>
         <img
+          src={"/w2.png"}
+          alt="headphones"
+          className="hero-top-banner-image"
+          loading="lazy" // Add this attribute
+        />{" "}
+        <img
           src={urlFor(HeroBanner.image)}
           alt="headphones"
           className="hero-banner-image"
+          loading="lazy" // Add this attribute
         />
         <div>
           <Link href={`/product/${HeroBanner.product}`}>
