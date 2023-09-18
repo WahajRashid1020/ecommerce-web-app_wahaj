@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="logo">
-        <Link href="/">{"𝒬𝒶𝓈𝒾𝓂 𝐸𝓁𝑒𝒸𝓉𝓇𝑜𝓃𝒾𝒸𝓈"}</Link>
+        <Link href="/">𝒬𝒶𝓈𝒾𝓂 𝐸𝓁𝑒𝒸𝓉𝓇𝑜𝓃𝒾𝒸𝓈</Link>
       </div>
       <div className="nav-items">
         <Link href="/">Home</Link>
