@@ -482,7 +482,6 @@ span.text-red {
 .product {
   display: flex;
   gap: 30px;
-  padding: 20px;
 }
 .product .cart-product-image {
   width: 180px;
@@ -819,7 +818,7 @@ span.text-red {
     height: 350px;
   }
   .cart-container {
-    width: 415px;
+    width: fit-content;
     padding: 4px;
   }
   .cart-heading {
