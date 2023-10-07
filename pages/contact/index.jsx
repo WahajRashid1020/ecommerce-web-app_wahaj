@@ -13,8 +13,7 @@ const Contact = () => {
 
   const handleLocationButtonClick = () => {
     window.open(
-      `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1199536583904!2d67.02290197537083!3d24.85975237792987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fb4041276a3%3A0x61aa4a4e8b0e4c3e!2sQasim%20electronics!5e0!3m2!1sen!2s!4v1696689891287!5m2!1sen!2s
-    `,
+      `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1199536583904!2d67.02290197537083!3d24.85975237792987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fb4041276a3%3A0x61aa4a4e8b0e4c3e!2sQasim%20electronics!5e0!3m2!1sen!2s!4v1696689891287!5m2!1sen!2s`,
       "_blank"
     );
   };
