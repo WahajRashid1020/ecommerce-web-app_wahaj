@@ -1,7 +1,7 @@
 import React from "react";
 const Contact = () => {
   const phoneNumber = "+923002259901";
-  const emailAddress = "qraza1020@gmail.com"; // Replace with your actual email address
+  const emailAddress = "maxim786@gmail.com"; // Replace with your actual email address
   const location =
     "Qasim electronics, Shop no 10, bismillah market, 236 Shambhu Nath St, Artillery Maidan, Karachi, Karachi City, Sindh"; //
   const handleCallButtonClick = () => {
@@ -47,9 +47,9 @@ const Contact = () => {
 
           <div className="visitingcard">
             <h3>Phone Numbers</h3>
-            <p>123897899</p>
-            <p>123897899</p>
-            <p>123897899</p>
+            <p>021-35682653</p>
+            <p>0300-2259901 </p>
+            <p>0323-2487536</p>
             <br />
             <h3>Email</h3>
             <p>{emailAddress}</p>
