@@ -29,7 +29,24 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div>
-        <p>2023 - {"𝒬𝒶𝓈𝒾𝓂 𝐸𝓁𝑒𝒸𝓉𝓇𝑜𝓃𝒾𝒸𝓈"} All rights reserverd</p>
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "row",
+          }}
+        >
+          2023 -{" "}
+          <img
+            width="100px"
+            height="50px"
+            style={{ padding: "5px", borderRadius: "8px", cursor: "pointer" }}
+            src="/logo.png"
+            alt="QASIM ELECTRONICS"
+          />{" "}
+          All rights reserverd
+        </span>
       </div>
       <div>
         <p className="icons">

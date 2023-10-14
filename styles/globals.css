@@ -171,7 +171,7 @@ a {
 
 .track {
   position: absolute;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   will-change: transform;
   animation: marquee 15s linear infinite;
   width: 180%;
@@ -201,9 +201,10 @@ span.text-red {
   text-align: center;
 }
 @media screen and (max-width: 500px) {
-  .logo {
-    color: gray;
-    font-size: 10px;
+  .logologo {
+    width: 80px;
+    height: 40px;
+    margin-left: 15px;
   }
 }
 
@@ -257,8 +258,11 @@ span.text-red {
 
 .product-name {
   font-weight: 500;
+  width: 250px !important;
 }
 .product-price {
+  width: 250px;
+
   font-weight: 800;
   margin-top: 6px;
   color: black;
