@@ -29,7 +29,16 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="logo">
-        <Link href="/">𝒬𝒶𝓈𝒾𝓂 𝐸𝓁𝑒𝒸𝓉𝓇𝑜𝓃𝒾𝒸𝓈</Link>
+        <Link href="/">
+          <img
+            className="logologo"
+            width="100px"
+            height="50px"
+            style={{ padding: "5px", borderRadius: "8px" }}
+            src="/logo.png"
+            alt="QASIM ELECTRONICS"
+          />
+        </Link>
       </div>
       <div className="nav-items">
         <Link href="/">Home</Link>
